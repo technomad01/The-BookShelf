@@ -1,0 +1,103 @@
+.App {
+    height: 100%;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(251, 238, 212);
+
+    @media only screen and (max-width: 900px) {
+        body {
+          background-color: rgb(251, 238, 212);
+        }
+      }
+  }
+  
+h1 {
+    border: 1px solid rgb(5, 5, 2);
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .books {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .book {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    background-color: rgb(209, 252, 238);
+  }
+  
+  .delete {
+    border: 1px solid rgb(5, 5, 2);
+    background-color: rgb(251, 238, 212);
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  
+  .update {
+    border: 1px solid rgb(5, 5, 2);
+    background-color: rgb(251, 238, 212);
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+    input {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid gray;
+    }
+  
+  
+  textarea {
+    padding: 10px;
+  }
+  
+  .formButton {
+    border: none;
+    padding: 10px;
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .button {
+    display: block;
+    padding: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+  }
