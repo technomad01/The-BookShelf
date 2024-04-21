@@ -1,14 +1,15 @@
-const express = require("express");
+import express from "express";
+import "dotenv/config";
 import mysql from "mysql2";
 import cors from "cors";
 
 const app = express();
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "BookShelf",
-  password: "password",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
 });
 
 app.use(express.json());
@@ -21,7 +22,7 @@ app.get("/", (req, res) => {
 app.get("/books", (req, res) => {
   const q = "SELECT * FROM books";
   db.query(q, (err, data) => {
-    if (err) return res.json(err);
+    if (err) return res.status(500).json({ error: err.message });
     return res.json(data);
   });
 });
@@ -68,6 +69,8 @@ app.put("/books/:id", (req, res) => {
     return res.json("Book has been updated succesfully");
   });
 });
-app.listen(3000, () => {
-  console.log("server is running on PORT 3000!");
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on PORT ${PORT}!`);
 });
