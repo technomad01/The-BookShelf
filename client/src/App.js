@@ -1,8 +1,8 @@
 import {
     BrowserRouter,Routes,Route } from "react-router-dom";
-import Books from "./pages/Books";
-import Add from "./pages/Add";
-import Update from "./pages/Update";
+import Books from "./components/Books";
+import Add from "./components/Add";
+import Update from "./components/Update";
 import "./style.css";
 
 
